@@ -45,14 +45,13 @@ function bombs(){
     }
 }
 
-
 function countBombs(i,j){
     var c=0;
     if(x[i][j].bomb){
         return;
     }
     var p=i-1;var q=i+1;var r=j-1;var s=j+1;
-    
+  
     if(!(i==0 || i==9 || j==0 ||j==9))
         counts(p,q,r,s,i,j);
     else if(i==0 && j!=0 && j!=9){
@@ -104,8 +103,6 @@ function counts(p,q,r,s,i,j){
         x[i][j].element=c.toString();
 }
 
-
-
 function adjacent(k){
     var i=parseInt(k/10);
     var j=parseInt(k%10);
@@ -120,7 +117,6 @@ function adjacent(k){
     else
         revealCell(k);
 }
-
 
 $(".cell").on("click",function(){
     if(!gameOver){
